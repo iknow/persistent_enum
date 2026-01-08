@@ -1,5 +1,8 @@
 # frozen_string_literal: true
 
+# Work around Rails 6.x bug where "logger" is used without being imported
+require 'logger'
+
 require 'yaml'
 require 'active_record'
 
