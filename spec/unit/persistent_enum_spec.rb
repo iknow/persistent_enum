@@ -4,6 +4,7 @@
 
 require 'persistent_enum'
 require 'byebug'
+require 'ostruct'
 
 require_relative '../spec_helper'
 
