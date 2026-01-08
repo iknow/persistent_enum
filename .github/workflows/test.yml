@@ -70,7 +70,7 @@ jobs:
     - name: Run tests
       run: bundle exec rspec --profile 10 --format RspecJunitFormatter --out test_results/rspec.xml --format progress
     - name: Upload result
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: rspec_{{ matrix.rails-version }}-${{ matrix.database }}.xml
