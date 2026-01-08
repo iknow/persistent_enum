@@ -36,7 +36,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        rails-version: ['5.2', '6.1', '7.2']
+        rails-version: ['5.2', '6.1', '7.2', '8.1']
         database: ['mysql', 'postgresql', 'sqlite']
         include:
           - database: mysql
@@ -54,6 +54,9 @@ jobs:
           - rails-version: '7.2'
             ruby-version: '3.2'
             bundle-gemfile: gemfiles/rails_7_2.gemfile
+          - rails-version: '8.1'
+            ruby-version: '4.0'
+            bundle-gemfile: gemfiles/rails_8_1.gemfile
 
     env: # $BUNDLE_GEMFILE must be set at the job level, so it is set for all steps
       BUNDLE_GEMFILE: ${{ github.workspace }}/${{ matrix.bundle-gemfile }}
