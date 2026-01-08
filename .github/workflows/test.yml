@@ -73,7 +73,7 @@ jobs:
       uses: actions/upload-artifact@v4
       if: always()
       with:
-        name: rspec_{{ matrix.rails-version }}-${{ matrix.database }}.xml
+        name: rspec_${{ matrix.rails-version }}-${{ matrix.database }}.xml
         path: test_results/rspec.xml
     - name: Test Report
       uses: dorny/test-reporter@v1
