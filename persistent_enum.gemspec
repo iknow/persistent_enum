@@ -18,8 +18,8 @@ Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ['lib']
 
-  spec.add_dependency 'activerecord', '>= 5.0', '< 8'
-  spec.add_dependency 'activesupport', '>= 5.0', '< 8'
+  spec.add_dependency 'activerecord', '>= 5.0', '< 9'
+  spec.add_dependency 'activesupport', '>= 5.0', '< 9'
 
   spec.add_dependency 'activerecord-import'
 
@@ -29,6 +29,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency 'appraisal'
   spec.add_development_dependency 'mysql2'
+  spec.add_development_dependency 'ostruct'
   spec.add_development_dependency 'pg'
   spec.add_development_dependency 'sqlite3'
 
